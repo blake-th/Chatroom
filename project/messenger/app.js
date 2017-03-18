@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var errorRouter = require('./routes/error');
+var chatroomRouter = require('./routes/chatroom');
+var loginRouter = require('./routes/login');
+
+
 
 var app = express();
 
@@ -25,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+app.use('/chatroom', chatroomRouter);
+app.use('/login', loginRouter);
 
 //  // catch 404 and forward to error handler
 //  app.use(function(req, res, next) {
