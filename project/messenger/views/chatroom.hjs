@@ -23,36 +23,38 @@
 		<!-- Default panel contents -->
 		<div class="panel-heading">Panel heading</div>
 		<div class="panel-body">
-			<p>...</p>
-		</div>
 
-		<!-- List group -->
-		<ul class="list-group">
-			<li class="list-group-item">Cras justo odio</li>
-			<li class="list-group-item">Dapibus ac facilisis in</li>
-			<li class="list-group-item">Morbi leo risus</li>
-			<li class="list-group-item">Porta ac consectetur ac</li>
-			<li class="list-group-item">Vestibulum at eros</li>
-		</ul>
+			<!-- List group -->
+			<ul class="list-group">
+				<!-- <li class="list-group-item">Cras justo odio</li> -->
+			</ul>
+		</div>
 	</div>
 	<!--pannel end-->
 
 	<!--message button-->
-	<div class="row">
+	<form>
+	<div class="form-group">
 		<div class="col-lg-6 col-lg-offset-6">
 			<div class="input-group">
-				<input type="text" class="form-control">
+				
+				<input type="text" class="form-control" id="message">
+
 				<span class="input-group-btn">
-					<button class="btn btn-default" type="button">Send</button>
+					<button class="btn btn-default" type="submit">Send</button>
 				</span>
+				
 			</div><!-- /input-group -->
 		</div><!-- /.col-lg-6 -->
 	</div><!-- /.row -->
+	</form>
 	<!--message button end-->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script src="javascripts/chatroomClient.js"></script>
 </body>
 </html>
