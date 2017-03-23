@@ -1,6 +1,5 @@
 var socketio = require('socket.io');
 
-
 module.exports = {
 	io: null,
 	runOn: function(server) {

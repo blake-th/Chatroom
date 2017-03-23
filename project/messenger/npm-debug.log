@@ -9,7 +9,7 @@
 6 silly lifecycle messenger@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle messenger@0.0.0~start: messenger@0.0.0
 8 verbose lifecycle messenger@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle messenger@0.0.0~start: PATH: /Users/blake/myapp/node-v6.10.0-darwin-x64/lib/node_modules/npm/bin/node-gyp-bin:/Users/blake/web/project/messenger/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/blake/myapp/node-v6.10.0-darwin-x64/bin:/Users/blake/eslab/messenger/node_modules/.bin:/Users/blake/myapp/node-v6.10.0-darwin-x64/bin:/Users/blake/myapp/express/node_modules/.bin:/Users/blake/eslab/messenger/node_modules/.bin
+9 verbose lifecycle messenger@0.0.0~start: PATH: /Users/blake/myapp/node-v6.10.0-darwin-x64/lib/node_modules/npm/bin/node-gyp-bin:/Users/blake/web/project/messenger/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/blake/myapp/node-v6.10.0-darwin-x64/bin:/Users/blake/myapp/express/node_modules/.bin:/Users/blake/eslab/messenger/node_modules/.bin
 10 verbose lifecycle messenger@0.0.0~start: CWD: /Users/blake/web/project/messenger
 11 silly lifecycle messenger@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle messenger@0.0.0~start: Returned: code: 1  signal: null
