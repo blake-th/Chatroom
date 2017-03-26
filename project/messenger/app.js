@@ -10,7 +10,7 @@ var users = require('./routes/users');
 var error = require('./routes/error');
 var chatroom = require('./routes/chatroom');
 var login = require('./routes/login');
-
+var lobby = require('./routes/lobby');
 
 
 var app = express();
@@ -32,6 +32,9 @@ app.use('/users', users);
 
 app.use('/login', login);
 app.use('/chatroom', chatroom);
+app.use('/lobby', lobby);
+app.use('/lobby', express.static(path.join(__dirname, 'public')));
+
 
 //  // catch 404 and forward to error handler
 //  app.use(function(req, res, next) {

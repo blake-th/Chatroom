@@ -3,9 +3,9 @@ $(function() {
 		//console.log('DEBUGGING!!!!!!');
 		//console.log(document);
 		//console.log(window);
-		var status = $('<input>').attr('type', 'hidden').attr('name', 'status').val('login');
+		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkLogin');
 
-		$('#loginInfo').append($(status));
+		$('#loginInfo').append($(action));
 		$('#loginInfo').submit();
 		//var dbg2 = document.getElementById('test');
 
@@ -16,9 +16,9 @@ $(function() {
 	});
 
 	$('#register-btn').on('click', function() {
-		var status = $('<input>').attr('type', 'hidden').attr('name', 'status').val('register');
+		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkRegister');
 
-		$('#loginInfo').append($(status));
+		$('#loginInfo').append($(action));
 		$('#loginInfo').submit();
 	});
 });
