@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   //console.log('==================================================');
   //console.log(hostServer);
   socketio.runOn(req.socket.server);
-  console.log(req.params);
+  //console.log(req.params);
 });
 
 module.exports = router;

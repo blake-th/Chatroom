@@ -15,9 +15,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 	console.log(req.body);
-	var {userName, password} = req.body;
-	if (checkUser(userName, password))
+	var {userName, password, status} = req.body;
+	if (checkUser[status](userName, password))
 		res.redirect('../chatroom');
+	else
+		res.redirect(req.baseUrl);
 	//console.log(userName);
 	//console.log(password);
 });
