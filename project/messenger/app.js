@@ -27,7 +27,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+
+//app.use('/', index);
+
+app.use('/', login);
 app.use('/users', users);
 
 app.use('/login', login);
@@ -74,5 +77,9 @@ app.use(error);
 //    res.status(err.status || 500);
 //    res.render('error');
 //  }
+
+app.runSocketio = function(socketio) {
+	chatroom.runSocketio(socketio);
+}
 
 module.exports = app;
