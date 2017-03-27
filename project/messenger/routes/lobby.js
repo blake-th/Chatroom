@@ -4,9 +4,10 @@ var path = require('path');
 
 var lobbyAction = require('../util/lobbyAction.js');
 
-router.use(express.static(path.resolve('../public')));
+router.use(express.static(path.resolve('public')));
 /* GET home page. */
 router.get('/:userName', function(req, res, next) {
+	console.log(path.resolve('public'));
   res.render('lobby');
 });
 

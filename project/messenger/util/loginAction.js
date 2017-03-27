@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = {
 	checkLogin: function(userName, password) {
 		return true;

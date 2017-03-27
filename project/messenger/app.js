@@ -33,7 +33,7 @@ app.use('/users', users);
 app.use('/login', login);
 app.use('/chatroom', chatroom);
 app.use('/lobby', lobby);
-app.use('/lobby', express.static(path.join(__dirname, 'public')));
+//app.use('/lobby', express.static(path.join(__dirname, 'public')));
 
 
 //  // catch 404 and forward to error handler
