@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
 
 router.runSocketio = function(io) {
 	io.on('connection', function(socket) {
-		//console.log('WTFFFFFFFFFFFF?');
 		console.log('a user connected~~');
 		socket.emit('chat message', 'System Say Hi');
 		var _this = this;
