@@ -1,11 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
+var path = require('path');
+
+router.use(express.static(path.resolve('public')));
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/:chatid', function(req, res, next) {
 	//var io = require('socket.io')(req.app.httpServer);
+	console.log('TOUCH!!!!!');
   res.render('chatroom');
+  console.log('RENDER SUCCESS!!!');
 });
 
 router.runSocketio = function(io) {

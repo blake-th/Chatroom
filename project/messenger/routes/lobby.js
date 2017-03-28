@@ -8,17 +8,20 @@ var friendList = require('../data/friendList/admin.json');
 router.use(express.static(path.resolve('public')));
 /* GET home page. */
 router.get('/:userName', function(req, res, next) {
-	console.log(path.resolve('public'));
+	//console.log(path.resolve('public'));
   res.render('lobby', friendList);
+  //console.log(friendList);
 });
 
 router.post('/:userName', function(req, res, next) {
 		console.log(req.body);
-		console.log(friendList);
+		//console.log(friendList);
 		var {friendName, action} = req.body;
-		lobbyAction[action](friendName);
-		console.log(req.originalUrl);
-		res.redirect(req.originalUrl);
+
+		if (lobbyAction[action](friendName))
+			res.redirect('/chatroom/'+req.params.userName+friendName);
+		else
+			res.redirect(req.originalUrl);
 });
 
 module.exports = router;

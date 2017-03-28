@@ -34,8 +34,9 @@ app.use('/', login);
 app.use('/users', users);
 
 app.use('/login', login);
-app.use('/chatroom', chatroom);
 app.use('/lobby', lobby);
+app.use('/chatroom', chatroom);
+
 //app.use('/lobby', express.static(path.join(__dirname, 'public')));
 
 

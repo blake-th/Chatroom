@@ -2,6 +2,9 @@ var fs = require('fs');
 
 module.exports = {
 	addFriend: function(friendName) {
-		return;
+		return true;
+	},
+	chatFriend: function(friendName) {
+		return true;
 	}
 };

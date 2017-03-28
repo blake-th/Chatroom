@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log(req.body);
 	var {userName, password, action} = req.body;
+	
 	if (loginAction[action](userName, password))
 		res.redirect('/lobby/'+userName);
 	else
