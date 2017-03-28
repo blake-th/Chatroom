@@ -15,6 +15,7 @@ router.get('/:chatid', function(req, res, next) {
 });
 
 router.runSocketio = function(io) {
+	router.io = io;
 	io.on('connection', function(socket) {
 		console.log('a user connected~~');
 		socket.emit('chat message', 'System Say Hi');
