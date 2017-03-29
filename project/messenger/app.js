@@ -33,10 +33,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //app.use('/', index);
-
-app.loginAction = loginAction;
-app.lobbyAction = lobbyAction;
-app.chatroomAction = chatroomAction;
+app.register = {}; // userName: password
+app.friendList = {}; // userName: friendList
+app.chatid = {} // id: messageList
+app.loginAction = loginAction(app);
+app.lobbyAction = lobbyAction(app);
+app.chatroomAction = chatroomAction(app);
 
 app.use('/', login);
 app.use('/users', users);

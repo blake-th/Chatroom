@@ -32,7 +32,9 @@ router.post('/', function(req, res, next) {
 			break;
 			//res.redirect(req.originalUrl);
 		case 'login successful':
-			response.url = path.resolve(req.baseUrl, '../lobby', userName);
+			//console.log(req.baseUrl);
+			response.url = path.resolve('/lobby', userName);
+			//console.log(response.url);
 			res.json(response);
 			//res.redirect('/lobby/'+userName);
 	}

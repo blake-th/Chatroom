@@ -1,9 +1,22 @@
 $(function() {
 	$('#add-friend-btn').on('click', function() {
-		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('addFriend');
+//		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('addFriend');
 
-		$('#add-friend-info').append($(action));
-		$('#add-friend-info').submit();
+//		$('#add-friend-info').append($(action));
+//		$('#add-friend-info').submit();
+		
+//		var userName = $('input[name="userName"]').val();
+		var friendName = $('input[name="friendName"]').val();
+		var action = 'addFriend';
+
+		$.post(window.location.href, {
+			'friendName': friendName,
+			'action': action
+		}).done(function(res) {
+			window.location.replace(res.url);
+			alert(res.message);
+		});
+
 	});
 
 	$('.friend-item').on('click', function() {

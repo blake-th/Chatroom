@@ -1,8 +1,11 @@
-var fs = require('fs');
+//var fs = require('fs');
 
 
-module.exports = {
-	getMessage: function(chatid) {
-		return {};
+module.exports = function(app) {
+	return {
+		app: app,
+		getMessage: function(chatid) {
+			return {};
+		}
 	}
 };
