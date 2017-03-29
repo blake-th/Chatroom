@@ -7,7 +7,7 @@ module.exports = function(app) {
 			var friendList = this.app.friendList[userName];
 			if (friendList.indexOf(friendName) !== -1)
 				return 'friend already';
-			friendList.push({'name': friendName});
+			friendList.push(friendName);
 			return 'add successful';
 		},
 		getFriendList: function(userName) {

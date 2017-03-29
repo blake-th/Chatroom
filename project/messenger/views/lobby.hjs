@@ -30,7 +30,7 @@
 				
 					<a href="#" class="list-group-item friend-item">
 					<form role="form" method="POST">
-							<h2 class="name">{{name}}</h2>
+							<h2 class="name">{{.}}</h2>
 			<!--				<h4>{{lastMessage}}</h4>
 							<h6>{{timestamp}}</h6>
 			-->
