@@ -1,5 +1,9 @@
 $(function () {
+
   var socket = io();
+  var roomName = window.location.pathname.split('/').slice(-1)[0];
+
+  socket.emit('connectTo', {'roomName': roomName});
 
   $('form').submit(function(){
     socket.emit('chat message', $('#message').val());

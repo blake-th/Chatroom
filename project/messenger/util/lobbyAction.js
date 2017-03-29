@@ -4,6 +4,8 @@ module.exports = function(app) {
 	return {
 		app: app,
 		addFriend: function(userName, friendName) {
+			if (!(friendName in this.app.register))
+				return 'user not found';
 			var friendList = this.app.friendList[userName];
 			if (friendList.indexOf(friendName) !== -1)
 				return 'friend already';

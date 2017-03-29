@@ -14,7 +14,7 @@ module.exports = function(app) {
 		if (userName in this.app.register)
 			return 'name used';
 		this.app.register[userName] = password;
-		this.app.friendList[userName] = [];
+		this.app.friendList[userName] = [userName];
 		//console.log('register: ', this.app.register);
 
 		return 'register successful';

@@ -26,6 +26,7 @@ router.post('/:userName', function(req, res, next) {
 		switch (response.message) {
 			case 'friend already':
 			case 'add successful':
+			case 'user not found':
 				res.json(response);
 				break;
 			default:

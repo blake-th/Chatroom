@@ -20,6 +20,14 @@ router.setSocketio = function(io) {
 		console.log('a user connected~~');
 		socket.emit('system message', 'System Say Hi');
 
+
+		socket.on('connectTo', function(msg) {
+			//console.log('connect to: ', path.basename(msg.connectTo));
+			//socket.join(path.basename(msg.connectTo));
+			console.log('connect to: ', msg.roomName);
+			socket.join(msg.roomName);
+		})
+
 		var _this = this;
 		socket.on('chat message', function(msg) {
 			console.log('receive message: '+msg);
