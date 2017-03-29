@@ -12,6 +12,10 @@ var chatroom = require('./routes/chatroom');
 var login = require('./routes/login');
 var lobby = require('./routes/lobby');
 
+var loginAction = require('./util/loginAction');
+var lobbyAction = require('./util/lobbyAction');
+var chatroomAction = require('./util/chatroomAction');
+
 
 var app = express();
 
@@ -29,6 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //app.use('/', index);
+
+app.loginAction = loginAction;
+app.lobbyAction = lobbyAction;
+app.chatroomAction = chatroomAction;
 
 app.use('/', login);
 app.use('/users', users);
@@ -79,8 +87,8 @@ app.use(error);
 //    res.render('error');
 //  }
 
-app.runSocketio = function(socketio) {
-	chatroom.runSocketio(socketio);
+app.setSocketio = function(socketio) {
+	chatroom.setSocketio(socketio);
 }
 
 module.exports = app;

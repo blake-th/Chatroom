@@ -11,9 +11,9 @@ $(function() {
 
 		var submitForm = $(this).find('form');
 		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('chatFriend');
-		var frrend = $('<input>').attr('type', 'hidden').attr('name', 'friendName').val(friendName);
+		var friend = $('<input>').attr('type', 'hidden').attr('name', 'friendName').val(friendName);
 
-		submitForm.append($(frrend));
+		submitForm.append($(friend));
 		submitForm.append($(action));
 		submitForm.submit();
 

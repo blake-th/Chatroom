@@ -1,12 +1,26 @@
 $(function() {
-	$('#login-btn').on('click', function() {
+	$('#login-btn').on('click', function(event) {
 		//console.log('DEBUGGING!!!!!!');
 		//console.log(document);
 		//console.log(window);
-		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkLogin');
+//		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkLogin');
 
-		$('#loginInfo').append($(action));
-		$('#loginInfo').submit();
+//		$('#loginInfo').append($(action));
+//		$('#loginInfo').submit();
+
+		var userName = $('input[name="userName"]').val();
+		var password = $('input[name="password"]').val();
+		var action = 'checkLogin';
+
+		$.post(window.location.href, {
+			'userName': userName,
+			'password': password,
+			'action': action
+		}).done(function(res) {
+			window.location.replace(res.url);
+			alert(res.message);
+
+		});
 		//var dbg2 = document.getElementById('test');
 
 		//console.log(dbg);
@@ -16,9 +30,23 @@ $(function() {
 	});
 
 	$('#register-btn').on('click', function() {
-		var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkRegister');
+	//	var action = $('<input>').attr('type', 'hidden').attr('name', 'action').val('checkRegister');
 
-		$('#loginInfo').append($(action));
-		$('#loginInfo').submit();
+	//	$('#loginInfo').append($(action));
+	//	$('#loginInfo').submit();
+		var userName = $('input[name="userName"]').val();
+		var password = $('input[name="password"]').val();
+		var action = 'checkRegister';
+
+		$.post(window.location.href, {
+			'userName': userName,
+			'password': password,
+			'action': action
+		}).done(function(res) {
+			window.location.replace(res.url);
+			alert(res.message);
+		});
+
+
 	});
 });

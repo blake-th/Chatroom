@@ -22,7 +22,7 @@ app.set('port', port);
 
 var server = http.createServer(app);
 var io = socketio(server);
-app.runSocketio(io);
+app.setSocketio(io);
 //app.createServer();
 /**
  * Listen on provided port, on all network interfaces.

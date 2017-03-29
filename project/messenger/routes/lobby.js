@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
-var lobbyAction = require('../util/lobbyAction.js');
+//var lobbyAction = require('../util/lobbyAction.js');
 var friendList = require('../data/friendList/admin.json');
 
 router.use(express.static(path.resolve('public')));
@@ -18,7 +18,7 @@ router.post('/:userName', function(req, res, next) {
 		//console.log(friendList);
 		var {friendName, action} = req.body;
 
-		if (lobbyAction[action](friendName))
+		if (req.app.lobbyAction[action](friendName))
 			res.redirect('/chatroom/'+req.params.userName+friendName);
 		else
 			res.redirect(req.originalUrl);

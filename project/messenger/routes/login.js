@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 var chatroom = require('./chatroom.js');
-var loginAction = require('../util/loginAction.js');
+var path = require('path');
+//var loginAction = require('../util/loginAction.js');
 
 
 
@@ -17,10 +18,25 @@ router.post('/', function(req, res, next) {
 	console.log(req.body);
 	var {userName, password, action} = req.body;
 	
-	if (loginAction[action](userName, password))
-		res.redirect('/lobby/'+userName);
-	else
-		res.redirect(req.originalUrl);
+	var response = {
+		'message': req.app.loginAction[action](userName, password),
+		'url': req.originalUrl
+	};
+
+	switch (response.message) {
+		case 'not register':
+		case 'wrong password':
+		case 'name used':
+		case 'register successful':
+			res.json(response);
+			break;
+			//res.redirect(req.originalUrl);
+		case 'login successful':
+			response.url = path.resolve(req.baseUrl, '../lobby', userName);
+			res.json(response);
+			//res.redirect('/lobby/'+userName);
+	}
+
 	//console.log(userName);
 	//console.log(password);
 });
