@@ -5,6 +5,19 @@ $(function () {
   var roomName = name1+'-'+name2;
   //var to = roomName.split('-')[1];
   console.log(from, '-', to);
+
+  function displayMessage() {
+    var messageContainer = $('<div class="message-container">');
+      messageContainer.append($('<h5>').text(this.content));
+      messageContainer.append($('<h6>').text(this.timestamp));
+      if (this.from === from)
+        messageContainer.addClass('text-right');
+      var listItem = $('<li class="list-group-item">').append(messageContainer);
+      $('.list-group').append(listItem);
+      window.scrollTo(0, document.body.scrollHeight);
+  }
+
+
   var socket = io();
 
   socket.on('connect', function() {
@@ -31,16 +44,25 @@ $(function () {
   });
 
   socket.on('old message', function(msg) {
-    $(msg).each(function() {
-      $('.list-group').append($('<li class="list-group-item">').text(this.content));
-    });
+    $(msg).each(displayMessage);
     //console.log(msg);
   });
 
   socket.on('chat message', function(msg){
-    $('.list-group').append($('<li class="list-group-item">').text(msg));
-    window.scrollTo(0, document.body.scrollHeight);
+//    $('.list-group').append($('<li class="list-group-item">').text(msg));
+//    window.scrollTo(0, document.body.scrollHeight);
+/*console.log(msg);
+var messageContainer = $('<div class="message-container">');
+      messageContainer.append($('<h5>').text(msg.content));
+      messageContainer.append($('<h6>').text(msg.timestamp));
+      if (msg.from === from)
+        messageContainer.addClass('text-right');
+      var listItem = $('<li class="list-group-item">').append(messageContainer);
+      $('.list-group').append(listItem);
+      window.scrollTo(0, document.body.scrollHeight);*/
+      displayMessage.call(msg);
   });
+
 
 
 });

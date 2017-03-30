@@ -37,8 +37,7 @@ router.setSocketio = function(app, io) {
 		//var _this = this;
 		socket.on('chat message', function(msg) {
 			console.log('receive message: ', msg);
-			io.to(msg.roomName).emit('chat message', msg.content);
-			app.chatroomAction['storeMessage'](msg.from, msg.to, msg.content);
+			io.to(msg.roomName).emit('chat message', app.chatroomAction['storeMessage'](msg.from, msg.to, msg.content));
 		});
 
 		socket.on('disconnect', function() {
