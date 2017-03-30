@@ -11,6 +11,7 @@ module.exports = function(app) {
 				return 'friend already';
 
 			friendList.push(friendName);
+			this.app.friendList[friendName].push(userName);
 
 			var [name1,name2] = [userName, friendName].sort();
 			var hash = name1 + '-' + name2;

@@ -18,25 +18,27 @@
 	<h1>Chat Room Lobby</h1>
 
 	<!--pannel-->
-	<div class="panel panel-default">
-		<!-- Default panel contents -->
-		<div class="panel-heading"><h2>Friends<h2></div>
-		<div class="panel-body">
+	<div class="row">
+		<div class="list-container col-lg-6">
+			<div class="panel panel-primary">
+				<!-- Default panel contents -->
+				<div class="panel-heading"><h2>Friends</h2></div>
+				<div class="panel-body">
 
-			<!-- List group -->
-			<div class="list-group friend-list">
-				<!-- <li class="list-group-item">Cras justo odio</li> -->
-				{{#friend}}
-				
-					<a href="#" class="list-group-item friend-item">
-					<form role="form" method="POST">
-							<h2 class="name">{{.}}</h2>
+					<!-- List group -->
+					<div class="list-group friend-list">
+						<!-- <li class="list-group-item">Cras justo odio</li> -->
+						{{#friend}}
+
+						<a href="#" class="list-group-item friend-item">
+							<form role="form" method="POST">
+								<h2 class="name">{{.}}</h2>
 			<!--				<h4>{{lastMessage}}</h4>
 							<h6>{{timestamp}}</h6>
-			-->
-			
+						-->
+
 					</form>
-					</a>
+				</a>
 
 
 
@@ -50,26 +52,80 @@
 
 	<!--add friend button-->
 	<!--form id="add-friend-info" role="form" method="POST"-->
-		<!--div class="form-group"-->
-			<div class="col-lg-3 col-lg-offset-0">
-				<div class="input-group">
+	<!--div class="form-group"-->
+	<div class="col-lg-6">
+		<div class="input-group">
 
-					<input type="text" class="form-control" name="friendName">
+			<input type="text" class="form-control" name="friendName">
 
-					 <span class="input-group-btn">
-						<button class="btn btn-default" type="button" id="add-friend-btn">Add</button>
-					</span>
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="add-friend-btn">Add</button>
+			</span>
 
-				</div><!-- /input-group -->
-			</div><!-- /.col-lg-6 -->
-		<!--/div--><!-- /.row -->
+		</div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+	<!--/div--><!-- /.row -->
 	<!--/form-->
 	<!--add friend button end-->
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="javascripts/lobbyClient.js"></script>
+</div>
+
+<div class="list-container col-lg-6">
+			<div class="panel panel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading"><h2>Groups</h2></div>
+				<div class="panel-body">
+
+					<!-- List group -->
+					<div class="list-group friend-list">
+						<!-- <li class="list-group-item">Cras justo odio</li> -->
+						{{#friend}}
+						
+						<a href="#" class="list-group-item friend-item">
+							<form role="form" method="POST">
+								<h2 class="name">{{.}}</h2>
+			<!--				<h4>{{lastMessage}}</h4>
+							<h6>{{timestamp}}</h6>
+						-->
+						
+					</form>
+				</a>
+
+
+
+				{{/friend}}
+
+			</div>
+
+		</div>
+	</div>
+	<!--pannel end-->
+
+	<!--add friend button-->
+	<!--form id="add-friend-info" role="form" method="POST"-->
+	<!--div class="form-group"-->
+	<div class="col-lg-6">
+		<div class="input-group">
+
+			<input type="text" class="form-control" name="groupName">
+
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="create-group-btn">Create</button>
+			</span>
+
+		</div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+	<!--/div--><!-- /.row -->
+	<!--/form-->
+	<!--add friend button end-->
+
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="javascripts/lobbyClient.js"></script>
 </body>
 </html>
