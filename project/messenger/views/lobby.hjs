@@ -49,21 +49,21 @@
 	<!--pannel end-->
 
 	<!--add friend button-->
-	<form id="add-friend-info" role="form" method="POST">
-		<div class="form-group">
+	<!--form id="add-friend-info" role="form" method="POST"-->
+		<!--div class="form-group"-->
 			<div class="col-lg-3 col-lg-offset-0">
 				<div class="input-group">
 
 					<input type="text" class="form-control" name="friendName">
 
-					<span class="input-group-btn">
+					 <span class="input-group-btn">
 						<button class="btn btn-default" type="button" id="add-friend-btn">Add</button>
 					</span>
 
 				</div><!-- /input-group -->
 			</div><!-- /.col-lg-6 -->
-		</div><!-- /.row -->
-	</form>
+		<!--/div--><!-- /.row -->
+	<!--/form-->
 	<!--add friend button end-->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

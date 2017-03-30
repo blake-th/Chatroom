@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', index);
 app.register = {}; // userName: password
 app.friendList = {}; // userName: friendList
-app.chatid = {} // id: messageList
+app.oldMessage = {};// id: messageList
 app.loginAction = loginAction(app);
 app.lobbyAction = lobbyAction(app);
 app.chatroomAction = chatroomAction(app);
@@ -90,7 +90,7 @@ app.use(error);
 //  }
 
 app.setSocketio = function(socketio) {
-	chatroom.setSocketio(socketio);
+	chatroom.setSocketio(app, socketio);
 }
 
 module.exports = app;

@@ -16,12 +16,11 @@
 </head>
 <body>
 	<h1>Chat Room Testing</h1>
-	<p>Welcome!!</p>
 
 	<!--pannel-->
 	<div class="panel panel-default">
 		<!-- Default panel contents -->
-		<div class="panel-heading">Panel heading</div>
+		<div class="panel-heading"><h3>{{to}}</h3></div>
 		<div class="panel-body">
 
 			<!-- List group -->
