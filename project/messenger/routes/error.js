@@ -1,14 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
 router.use(catch404);
 router.use(errorHandler);
 
 function catch404(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+	var err = new Error('Not Found');
+	err.status = 404;
+	next(err);
 }
 
 function errorHandler(err, req, res, next) {

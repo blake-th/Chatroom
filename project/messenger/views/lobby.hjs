@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Chat Room Lobby</title>
+	<title>Chat Room</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,8 +15,7 @@
 
 </head>
 <body>
-	<h1>Chat Room Lobby</h1>
-
+	<h1>Lobby</h1>
 	<!--pannel-->
 	<div class="row">
 		<div class="list-container col-lg-6">
@@ -24,59 +23,39 @@
 				<!-- Default panel contents -->
 				<div class="panel-heading"><h2>Friends</h2></div>
 				<div class="panel-body">
-
 					<!-- List group -->
 					<div class="list-group friend-list">
 						<!-- <li class="list-group-item">Cras justo odio</li> -->
 						{{#groups}}
-
 						<a href="#" class="list-group-item friend-item">
 							<form role="form" method="POST">
 								<h2 class="name">{{.}}</h2>
-			<!--				<h4>{{lastMessage}}</h4>
-							<h6>{{timestamp}}</h6>
-						-->
-
-					</form>
-				</a>
-
-
-
-				{{/groups}}
-
+							</form>
+						</a>
+						{{/groups}}
+					</div>
+				</div>
 			</div>
-
+			<!--pannel end-->
+			<!--add friend button-->
+			<div class="col-lg-6">
+				<div class="input-group">
+					<input type="text" class="form-control" name="groupName">
+					<span class="input-group-btn">
+						<button class="btn btn-success" type="button" id="add-friend-btn">Add</button>
+						<button class="btn btn-default" type="button" id="add-group-btn">Group</button>
+					</span>
+				</div>
+			</div>
+			<!--add friend button end-->
 		</div>
 	</div>
-	<!--pannel end-->
 
-	<!--add friend button-->
-	<!--form id="add-friend-info" role="form" method="POST"-->
-	<!--div class="form-group"-->
-	<div class="col-lg-6">
-		<div class="input-group">
-
-			<input type="text" class="form-control" name="groupName">
-
-			<span class="input-group-btn">
-				<button class="btn btn-success" type="button" id="add-friend-btn">Add</button>
-				<button class="btn btn-default" type="button" id="add-group-btn">Group</button>
-			</span>
-
-		</div><!-- /input-group -->
-	</div><!-- /.col-lg-6 -->
-	<!--/div--><!-- /.row -->
-	<!--/form-->
-	<!--add friend button end-->
-
-</div>
-</div>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="javascripts/lobbyClient.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="javascripts/lobbyClient.js"></script>
 </body>
 </html>
 

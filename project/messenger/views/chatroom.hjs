@@ -15,14 +15,12 @@
 
 </head>
 <body>
-	<h1>Chat Room Testing</h1>
-
+	<h1>Chat Room</h1>
 	<!--pannel-->
 	<div class="panel panel-default">
 		<!-- Default panel contents -->
 		<div class="panel-heading"><h3>{{to}}</h3></div>
 		<div class="panel-body">
-
 			<!-- List group -->
 			<ul class="list-group">
 				<!-- <li class="list-group-item">Cras justo odio</li> -->
@@ -33,19 +31,16 @@
 
 	<!--message button-->
 	<form>
-	<div class="form-group">
-		<div class="col-lg-6 col-lg-offset-6">
-			<div class="input-group">
-				
-				<input type="text" class="form-control" id="message">
-
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="submit">Send</button>
-				</span>
-				
-			</div><!-- /input-group -->
-		</div><!-- /.col-lg-6 -->
-	</div><!-- /.row -->
+		<div class="form-group">
+			<div class="col-lg-6 col-lg-offset-6">
+				<div class="input-group">			
+					<input type="text" class="form-control" id="message">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit">Send</button>
+					</span>			
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
 	</form>
 	<!--message button end-->
 

@@ -15,9 +15,8 @@
 
 </head>
 <body>
-	<h1>Chat Room Testing</h1>
+	<h1>Login</h1>
 	<p>Welcome!!</p>
-
 	<!--login-->
 	<form id="loginInfo" role="form" method="POST">
 		<div class="form-group">
