@@ -11,12 +11,19 @@ $(function () {
 
   function displayMessage() {
     var messageContainer = $('<div class="message-container">');
-      messageContainer.append($('<h5>').text(this.content));
+      messageContainer.append($('<h2>').text(this.from+':'));
+      messageContainer.append($('<h4>').text(this.content));
       messageContainer.append($('<h6>').text(this.timestamp));
-      if (this.from === userName)
+
+      var listItem = $('<li class="list-group-item">');
+      if (this.from === userName) {
         messageContainer.addClass('text-right');
-      var listItem = $('<li class="list-group-item">').append(messageContainer);
+        messageContainer.addClass('bg-info text-white');
+      }
+
+      listItem.append(messageContainer);
       $('.list-group').append(listItem);
+
       window.scrollTo(0, document.body.scrollHeight);
   }
 
