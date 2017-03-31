@@ -27,12 +27,12 @@ module.exports = function(app) {
 				if (from === to)
 					return newMessage;
 				var tmp2 = app.messageList[to][from].push(newMessage);
-				console.log('TMP1', tmp1);
-				console.log('TMP2', tmp2);
+				//console.log('TMP1', tmp1);
+				//console.log('TMP2', tmp2);
 			} else {
 				var updateList = to.split('--')[1].split('-');
 				console.log('UPDATE LIST:', updateList);
-				updateList.push(from);
+				//updateList.push(from);
 				updateList.forEach(function(userName, index, array) {
 					app.messageList[userName][to].push(newMessage);
 				});
