@@ -34,8 +34,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', index);
 app.register = {}; // userName: password
-app.friendList = {}; // userName: friendList
-app.oldMessage = {};// id: messageList
+//app.friendList = {}; // userName: friendList
+//app.groupList = {};
+//app.oldMessage = {};// id: messageList
+app.messageList = {};
 app.loginAction = loginAction(app);
 app.lobbyAction = lobbyAction(app);
 app.chatroomAction = chatroomAction(app);

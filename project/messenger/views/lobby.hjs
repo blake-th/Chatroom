@@ -28,7 +28,7 @@
 					<!-- List group -->
 					<div class="list-group friend-list">
 						<!-- <li class="list-group-item">Cras justo odio</li> -->
-						{{#friend}}
+						{{#groups}}
 
 						<a href="#" class="list-group-item friend-item">
 							<form role="form" method="POST">
@@ -42,58 +42,7 @@
 
 
 
-				{{/friend}}
-
-			</div>
-
-		</div>
-	</div>
-	<!--pannel end-->
-
-	<!--add friend button-->
-	<!--form id="add-friend-info" role="form" method="POST"-->
-	<!--div class="form-group"-->
-	<div class="col-lg-6">
-		<div class="input-group">
-
-			<input type="text" class="form-control" name="friendName">
-
-			<span class="input-group-btn">
-				<button class="btn btn-default" type="button" id="add-friend-btn">Add</button>
-			</span>
-
-		</div><!-- /input-group -->
-	</div><!-- /.col-lg-6 -->
-	<!--/div--><!-- /.row -->
-	<!--/form-->
-	<!--add friend button end-->
-
-</div>
-
-<div class="list-container col-lg-6">
-			<div class="panel panel-default">
-				<!-- Default panel contents -->
-				<div class="panel-heading"><h2>Groups</h2></div>
-				<div class="panel-body">
-
-					<!-- List group -->
-					<div class="list-group friend-list">
-						<!-- <li class="list-group-item">Cras justo odio</li> -->
-						{{#friend}}
-						
-						<a href="#" class="list-group-item friend-item">
-							<form role="form" method="POST">
-								<h2 class="name">{{.}}</h2>
-			<!--				<h4>{{lastMessage}}</h4>
-							<h6>{{timestamp}}</h6>
-						-->
-						
-					</form>
-				</a>
-
-
-
-				{{/friend}}
+				{{/groups}}
 
 			</div>
 
@@ -110,7 +59,8 @@
 			<input type="text" class="form-control" name="groupName">
 
 			<span class="input-group-btn">
-				<button class="btn btn-default" type="button" id="create-group-btn">Create</button>
+				<button class="btn btn-success" type="button" id="add-friend-btn">Add</button>
+				<button class="btn btn-default" type="button" id="add-group-btn">Group</button>
 			</span>
 
 		</div><!-- /input-group -->
@@ -129,3 +79,4 @@
 <script src="javascripts/lobbyClient.js"></script>
 </body>
 </html>
+
